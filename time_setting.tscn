@@ -1,0 +1,252 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgu6jdnvck8hd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqqs8"]
+font_size = 46
+
+[sub_resource type="LabelSettings" id="LabelSettings_wal2d"]
+font_size = 46
+
+[node name="TimeSetting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -101.0
+offset_right = 222.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="FocusTime" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime"]
+layout_mode = 2
+text = "집중 시간"
+label_settings = SubResource("LabelSettings_sqqs8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="HBoxContainer" parent="VBoxContainer/FocusTime"]
+layout_mode = 2
+
+[node name="Hour" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Hour"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTime/Time/Hour"]
+layout_mode = 2
+text = "+"
+
+[node name="Sep" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sep"]
+layout_mode = 2
+text = ":"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Min10" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Min10"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_10" type="Button" parent="VBoxContainer/FocusTime/Time/Min10"]
+layout_mode = 2
+text = "+"
+
+[node name="Min1" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Min1"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTime/Time/Min1"]
+layout_mode = 2
+text = "+"
+
+[node name="Sep2" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sep2"]
+layout_mode = 2
+text = ":"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sec10"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_10" type="Button" parent="VBoxContainer/FocusTime/Time/Sec10"]
+layout_mode = 2
+text = "+"
+
+[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sec1"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTime/Time/Sec1"]
+layout_mode = 2
+text = "+"
+
+[node name="RestTime" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime"]
+layout_mode = 2
+text = "휴식 시간"
+label_settings = SubResource("LabelSettings_sqqs8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="HBoxContainer" parent="VBoxContainer/RestTime"]
+layout_mode = 2
+
+[node name="Hour" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Hour"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_1" type="Button" parent="VBoxContainer/RestTime/Time/Hour"]
+layout_mode = 2
+text = "+"
+
+[node name="Sep" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sep"]
+layout_mode = 2
+text = ":"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Min10" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Min10"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_10" type="Button" parent="VBoxContainer/RestTime/Time/Min10"]
+layout_mode = 2
+text = "+"
+
+[node name="Min1" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Min1"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_1" type="Button" parent="VBoxContainer/RestTime/Time/Min1"]
+layout_mode = 2
+text = "+"
+
+[node name="Sep2" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sep2"]
+layout_mode = 2
+text = ":"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sec10"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_10" type="Button" parent="VBoxContainer/RestTime/Time/Sec10"]
+layout_mode = 2
+text = "+"
+
+[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sec1"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_wal2d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="add_1" type="Button" parent="VBoxContainer/RestTime/Time/Sec1"]
+layout_mode = 2
+text = "+"
