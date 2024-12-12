@@ -1,0 +1,154 @@
+[gd_scene load_steps=3 format=3 uid="uid://wilpe8312h7u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i0k37"]
+font_size = 111
+
+[sub_resource type="LabelSettings" id="LabelSettings_todo0"]
+font_size = 26
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -207.0
+offset_top = -69.0
+offset_right = -121.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "시작"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -69.0
+offset_right = -20.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "중단"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 146.0
+offset_top = 174.0
+offset_right = -116.0
+offset_bottom = -154.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0:00:00"
+label_settings = SubResource("LabelSettings_i0k37")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = 167.0
+offset_right = -424.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "남은시간"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 9.0
+offset_right = -564.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "집중시간"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 179.0
+offset_top = 9.0
+offset_right = -397.0
+offset_bottom = -448.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "휴식시간"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 35.0
+offset_right = -538.0
+offset_bottom = -409.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0:00:00"
+label_settings = SubResource("LabelSettings_todo0")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 179.0
+offset_top = 35.0
+offset_right = -372.0
+offset_bottom = -409.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0:00:00"
+label_settings = SubResource("LabelSettings_todo0")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_right = 257.0
+offset_bottom = 31.0
+
+[node name="SpinBox" type="SpinBox" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="SpinBox2" type="SpinBox" parent="HBoxContainer"]
+layout_mode = 2
+step = 10.0
+alignment = 2
+
+[node name="SpinBox3" type="SpinBox" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="SpinBox4" type="SpinBox" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 2
