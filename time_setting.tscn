@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgu6jdnvck8hd"]
+[gd_scene load_steps=4 format=3 uid="uid://dgu6jdnvck8hd"]
+
+[ext_resource type="Script" path="res://time_setting.gd" id="1_7jowc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqqs8"]
 font_size = 46
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7jowc")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
