@@ -4,5 +4,5 @@ extends Node
 # 기본값
 # 집중시간 20분
 # 휴식시간 5분
-var FocusTime = 1200
-var RestTime = 300
+var FocusTimeData = TimeStruct.new(0, 20, 0)
+var RestTimeData = TimeStruct.new(0, 5, 0)
