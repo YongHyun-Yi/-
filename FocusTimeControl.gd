@@ -9,6 +9,7 @@ extends HBoxContainer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	FocusTimeLabelUpdate()
+	GlobalScript.FocusTimeData.ValueUpdate.connect(FocusTimeLabelUpdate)
 	pass # Replace with function body.
 
 
@@ -17,13 +18,31 @@ func _process(delta: float) -> void:
 	pass
 
 func FocusTimeLabelUpdate():
-	var FocusTime = GlobalScript.FocusTime
+	FocusHourLabel.text = str(GlobalScript.FocusTimeData.Hour)
 	
-	FocusHourLabel.text = str(FocusTime / 3600)
-	FocusTime %= 3600
-	FocusMin10Label.text = str(FocusTime / 60 / 10)
-	FocusMin1Label.text = str(FocusTime / 60 % 10)
-	FocusTime %= 60
-	FocusSec10Label.text = str(FocusTime / 10)
-	FocusSec1Label.text = str(FocusTime % 10)
+	FocusMin10Label.text = str(GlobalScript.FocusTimeData.Min / 10)
+	FocusMin1Label.text = str(GlobalScript.FocusTimeData.Min % 10)
+	
+	FocusSec10Label.text = str(GlobalScript.FocusTimeData.Sec / 10)
+	FocusSec1Label.text = str(GlobalScript.FocusTimeData.Sec % 10)
+	return
+
+func HourAdd1Button() -> void:
+	GlobalScript.FocusTimeData.Hour += 1
+	return
+
+func MinAdd10Button() -> void:
+	GlobalScript.FocusTimeData.Min += 10
+	return
+
+func MinAdd1Button() -> void:
+	GlobalScript.FocusTimeData.Min += 1
+	return
+
+func SecAdd10Button() -> void:
+	GlobalScript.FocusTimeData.Sec += 10
+	return
+
+func SecAdd1Button() -> void:
+	GlobalScript.FocusTimeData.Sec += 1
 	return

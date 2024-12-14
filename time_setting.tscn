@@ -257,3 +257,9 @@ vertical_alignment = 1
 [node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec1"]
 layout_mode = 2
 text = "+"
+
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Hour/add_1" to="VBoxContainer/FocusTimeControl" method="HourAdd1Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min10/add_10" to="VBoxContainer/FocusTimeControl" method="MinAdd10Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min1/add_1" to="VBoxContainer/FocusTimeControl" method="MinAdd1Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec10/add_10" to="VBoxContainer/FocusTimeControl" method="SecAdd10Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec1/add_1" to="VBoxContainer/FocusTimeControl" method="SecAdd1Button"]
