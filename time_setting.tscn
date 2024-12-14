@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgu6jdnvck8hd"]
+[gd_scene load_steps=6 format=3 uid="uid://dgu6jdnvck8hd"]
 
 [ext_resource type="Script" path="res://time_setting.gd" id="1_7jowc"]
+[ext_resource type="Script" path="res://FocusTimeControl.gd" id="2_g0kcq"]
+[ext_resource type="Script" path="res://RestTimeControl.gd" id="3_lresq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_sqqs8"]
 font_size = 46
@@ -32,224 +34,226 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 30
 
-[node name="FocusTime" type="HBoxContainer" parent="VBoxContainer"]
+[node name="FocusTimeControl" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 32
+script = ExtResource("2_g0kcq")
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl"]
 layout_mode = 2
 text = "집중 시간"
 label_settings = SubResource("LabelSettings_sqqs8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Time" type="HBoxContainer" parent="VBoxContainer/FocusTime"]
+[node name="Time" type="HBoxContainer" parent="VBoxContainer/FocusTimeControl"]
 layout_mode = 2
 
-[node name="Hour" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Hour" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Hour"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Hour"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_1" type="Button" parent="VBoxContainer/FocusTime/Time/Hour"]
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Hour"]
 layout_mode = 2
 text = "+"
 
-[node name="Sep" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Sep" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sep"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sep"]
 layout_mode = 2
 text = ":"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Min10" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Min10" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Min10"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Min10"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/FocusTime/Time/Min10"]
+[node name="add_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min10"]
 layout_mode = 2
 text = "+"
 
-[node name="Min1" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Min1" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Min1"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Min1"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_1" type="Button" parent="VBoxContainer/FocusTime/Time/Min1"]
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min1"]
 layout_mode = 2
 text = "+"
 
-[node name="Sep2" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Sep2" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sep2"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sep2"]
 layout_mode = 2
 text = ":"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sec10"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sec10"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/FocusTime/Time/Sec10"]
+[node name="add_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec10"]
 layout_mode = 2
 text = "+"
 
-[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/FocusTime/Time"]
+[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTime/Time/Sec1"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sec1"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_1" type="Button" parent="VBoxContainer/FocusTime/Time/Sec1"]
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec1"]
 layout_mode = 2
 text = "+"
 
-[node name="RestTime" type="HBoxContainer" parent="VBoxContainer"]
+[node name="RestTimeControl" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 32
+script = ExtResource("3_lresq")
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl"]
 layout_mode = 2
 text = "휴식 시간"
 label_settings = SubResource("LabelSettings_sqqs8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Time" type="HBoxContainer" parent="VBoxContainer/RestTime"]
+[node name="Time" type="HBoxContainer" parent="VBoxContainer/RestTimeControl"]
 layout_mode = 2
 
-[node name="Hour" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Hour" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Hour"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Hour"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_1" type="Button" parent="VBoxContainer/RestTime/Time/Hour"]
+[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Hour"]
 layout_mode = 2
 text = "+"
 
-[node name="Sep" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Sep" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sep"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sep"]
 layout_mode = 2
 text = ":"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Min10" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Min10" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Min10"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Min10"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/RestTime/Time/Min10"]
+[node name="add_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min10"]
 layout_mode = 2
 text = "+"
 
-[node name="Min1" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Min1" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Min1"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Min1"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_1" type="Button" parent="VBoxContainer/RestTime/Time/Min1"]
+[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min1"]
 layout_mode = 2
 text = "+"
 
-[node name="Sep2" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Sep2" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sep2"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sep2"]
 layout_mode = 2
 text = ":"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sec10"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sec10"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/RestTime/Time/Sec10"]
+[node name="add_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec10"]
 layout_mode = 2
 text = "+"
 
-[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/RestTime/Time"]
+[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTime/Time/Sec1"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sec1"]
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_1" type="Button" parent="VBoxContainer/RestTime/Time/Sec1"]
+[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec1"]
 layout_mode = 2
 text = "+"
