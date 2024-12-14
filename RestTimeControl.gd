@@ -26,3 +26,43 @@ func RestTimeLabelUpdate():
 	RestSec10Label.text = str(GlobalScript.RestTimeData.Sec / 10)
 	RestSec1Label.text = str(GlobalScript.RestTimeData.Sec % 10)
 	return
+
+func HourAdd1Button() -> void:
+	GlobalScript.RestTimeData.Hour += 1
+	return
+
+func HourSub1Button() -> void:
+	GlobalScript.RestTimeData.Hour -= 1
+	return
+
+func MinAdd10Button() -> void:
+	GlobalScript.RestTimeData.Min += 10
+	return
+
+func MinSub10Button() -> void:
+	GlobalScript.RestTimeData.Min -= 10
+	return
+
+func MinAdd1Button() -> void:
+	GlobalScript.RestTimeData.Min += 1
+	return
+
+func MinSub1Button() -> void:
+	GlobalScript.RestTimeData.Min -= 1
+	return
+
+func SecAdd10Button() -> void:
+	GlobalScript.RestTimeData.Sec += 10
+	return
+
+func SecSub10Button() -> void:
+	GlobalScript.RestTimeData.Sec -= 10
+	return
+
+func SecAdd1Button() -> void:
+	GlobalScript.RestTimeData.Sec += 1
+	return
+
+func SecSub1Button() -> void:
+	GlobalScript.RestTimeData.Sec -= 1
+	return
