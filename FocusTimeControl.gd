@@ -31,18 +31,38 @@ func HourAdd1Button() -> void:
 	GlobalScript.FocusTimeData.Hour += 1
 	return
 
+func HourSub1Button() -> void:
+	GlobalScript.FocusTimeData.Hour -= 1
+	return
+
 func MinAdd10Button() -> void:
 	GlobalScript.FocusTimeData.Min += 10
+	return
+
+func MinSub10Button() -> void:
+	GlobalScript.FocusTimeData.Min -= 10
 	return
 
 func MinAdd1Button() -> void:
 	GlobalScript.FocusTimeData.Min += 1
 	return
 
+func MinSub1Button() -> void:
+	GlobalScript.FocusTimeData.Min -= 1
+	return
+
 func SecAdd10Button() -> void:
 	GlobalScript.FocusTimeData.Sec += 10
 	return
 
+func SecSub10Button() -> void:
+	GlobalScript.FocusTimeData.Sec -= 10
+	return
+
 func SecAdd1Button() -> void:
 	GlobalScript.FocusTimeData.Sec += 1
+	return
+
+func SecSub1Button() -> void:
+	GlobalScript.FocusTimeData.Sec -= 1
 	return
