@@ -2,7 +2,6 @@ extends Control
 enum {FOCUS, REST}
 
 @export var CurState = FOCUS
-@export var IsPaused = false
 
 # 일단 시작은 집중 시간부터
 # 미리 time setting, pomo timer 씬이 로드되어있는 채로시작한다면
@@ -39,11 +38,31 @@ func TimerTimeout() -> void:
 			CurState = REST
 			$Label.text = "휴식 시간"
 			$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.RestTimeData)
+			$HBoxContainer/SkipButton.disabled = false
 			
 		REST:
 			CurState = FOCUS
 			$Label.text = "집중 시간"
 			$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.FocusTimeData)
+			$HBoxContainer/SkipButton.disabled = true
 	
 	$Timer.start()
+	pass # Replace with function body.
+
+func SkipButtonDown() -> void:
+	$Timer.stop()
+	TimerTimeout()
+	pass # Replace with function body.
+
+func PauseButtonDown() -> void:
+	if $Timer.paused == true:
+		$Timer.paused = false
+		$HBoxContainer/PauseButton.text = "일시정지"
+	else:
+		$Timer.paused = true
+		$HBoxContainer/PauseButton.text = "계속하기"
+	pass # Replace with function body.
+
+func StopButtonDown() -> void:
+	# 시간 설정 화면으로 넘어간다
 	pass # Replace with function body.
