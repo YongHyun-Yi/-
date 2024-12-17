@@ -43,3 +43,14 @@ func SetSec(value: int):
 	
 	Sec = (new_10 * 10) + new_1
 	emit_signal("ValueUpdate")
+
+# 자신의 시간을 초 단위로 반환
+# 다른 씬에서도 사용 할 수 있도록 모듈화 함
+func GetTotalSec() -> int:
+	var ret: int = 0;
+	
+	ret += Hour * 3600
+	ret += Min * 60
+	ret += Sec
+	
+	return ret

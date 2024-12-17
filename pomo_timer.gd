@@ -9,11 +9,13 @@ func _on_visibility_changed() -> void:
 		CurState = FOCUS
 		$Label.text = "집중 시간"
 		$HBoxContainer/PauseButton.text = "일시정지"
-		$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.FocusTimeData)
+		$Timer.wait_time = GlobalScript.FocusTimeData.GetTotalSec()
 		$Timer.start()
 		$Timer.paused = false
 	else:
 		$Timer.stop()
+		if $sfx.playing:
+			$sfx.stop()
 	pass # Replace with function body.
 
 func _ready() -> void:
@@ -27,16 +29,7 @@ func _process(delta: float) -> void:
 	$Time/Sec.text = str("%02d" % (time_left % 3600 % 60))
 	pass
 
-# TimeStruct의 시간을 초 단위로 반환
-# 혹시 모를 다수의 TImeStruct를 대비해서 모듈화 한다
-func GetWaitTimeFromTs(ts: TimeStruct) -> int:
-	var ret: int = 0;
-	
-	ret += ts.Hour * 3600
-	ret += ts.Min * 60
-	ret += ts.Sec
-	
-	return ret
+
 
 # 현재 시간이 종료되면 CurStats를 토글한다
 # 이 부분을 토글 따로 렌더 따로 나눌 수 있을까...
@@ -45,7 +38,7 @@ func TimerTimeout() -> void:
 		FOCUS:
 			CurState = REST
 			$Label.text = "휴식 시간"
-			$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.RestTimeData)
+			$Timer.wait_time = GlobalScript.RestTimeData.GetTotalSec()
 			$HBoxContainer/SkipButton.disabled = false
 			if $sfx.playing:
 				$sfx.stop()
@@ -55,7 +48,7 @@ func TimerTimeout() -> void:
 		REST:
 			CurState = FOCUS
 			$Label.text = "집중 시간"
-			$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.FocusTimeData)
+			$Timer.wait_time = GlobalScript.FocusTimeData.GetTotalSec()
 			$HBoxContainer/SkipButton.disabled = true
 			if $sfx.playing:
 				$sfx.stop()
