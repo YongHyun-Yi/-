@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://pomo_timer.gd" id="1_xmeks"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_65eq6"]
-font_size = 46
+font_size = 101
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ok3c"]
 font_size = 26
@@ -71,10 +71,13 @@ one_shot = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 9.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 47.0
 text = "집중 시간"
 label_settings = SubResource("LabelSettings_3ok3c")
+vertical_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -89,6 +92,7 @@ offset_right = 112.0
 offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/separation = 35
 
 [node name="SkipButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
