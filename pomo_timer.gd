@@ -47,12 +47,20 @@ func TimerTimeout() -> void:
 			$Label.text = "휴식 시간"
 			$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.RestTimeData)
 			$HBoxContainer/SkipButton.disabled = false
+			if $sfx.playing:
+				$sfx.stop()
+			$sfx.stream = GlobalScript.RestMusicWav
+			$sfx.play()
 			
 		REST:
 			CurState = FOCUS
 			$Label.text = "집중 시간"
 			$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.FocusTimeData)
 			$HBoxContainer/SkipButton.disabled = true
+			if $sfx.playing:
+				$sfx.stop()
+			$sfx.stream = GlobalScript.FocusMusicWav
+			$sfx.play()
 	
 	$Timer.start()
 	pass # Replace with function body.

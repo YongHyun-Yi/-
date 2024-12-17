@@ -107,6 +107,9 @@ text = "일시정지"
 layout_mode = 2
 text = "그만하기"
 
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+bus = &"Sfx"
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="timeout" from="Timer" to="." method="TimerTimeout"]
 [connection signal="button_down" from="HBoxContainer/SkipButton" to="." method="SkipButtonDown"]
