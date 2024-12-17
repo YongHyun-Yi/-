@@ -3,12 +3,20 @@ enum {FOCUS, REST}
 
 @export var CurState = FOCUS
 
-# 일단 시작은 집중 시간부터
-# 미리 time setting, pomo timer 씬이 로드되어있는 채로시작한다면
-# 이 부분은 들어낸다...
+func _on_visibility_changed() -> void:
+	if visible == true:
+		# 일단 시작은 집중 시간부터
+		CurState = FOCUS
+		$Label.text = "집중 시간"
+		$HBoxContainer/PauseButton.text = "일시정지"
+		$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.FocusTimeData)
+		$Timer.start()
+		$Timer.paused = false
+	else:
+		$Timer.stop()
+	pass # Replace with function body.
+
 func _ready() -> void:
-	$Timer.wait_time = GetWaitTimeFromTs(GlobalScript.FocusTimeData)
-	$Timer.start()
 	pass # Replace with function body.
 
 # 현재 타이머의 남은 시간을 계속해서 표시 함
@@ -61,8 +69,4 @@ func PauseButtonDown() -> void:
 	else:
 		$Timer.paused = true
 		$HBoxContainer/PauseButton.text = "계속하기"
-	pass # Replace with function body.
-
-func StopButtonDown() -> void:
-	# 시간 설정 화면으로 넘어간다
 	pass # Replace with function body.
