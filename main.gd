@@ -12,8 +12,13 @@ func _process(delta: float) -> void:
 
 
 func StartButtonDown() -> void:
-	$TimeSetting.hide()
-	$PomoTimer.show()
+	# 시간의 최소값을 확인한다
+	# 여기서 처리하는게 맞을까...
+	if GlobalScript.FocusTimeData.GetTotalSec() > 0 && GlobalScript.RestTimeData.GetTotalSec() > 0:
+		$TimeSetting.hide()
+		$PomoTimer.show()
+	elif $TimeSetting/TimeError.visible == false:
+		$TimeSetting/TimeError.show()
 	pass # Replace with function body.
 
 

@@ -304,6 +304,24 @@ text = "-"
 layout_mode = 2
 text = "시작하기"
 
+[node name="TimeError" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -107.0
+offset_top = -44.0
+offset_right = 107.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "시간을 1초 이상 설정해주세요"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Hour/add_1" to="VBoxContainer/FocusTimeControl" method="HourAdd1Button"]
 [connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Hour/sub_1" to="VBoxContainer/FocusTimeControl" method="HourSub1Button"]
