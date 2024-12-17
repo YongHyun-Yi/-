@@ -79,41 +79,42 @@ label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Min10" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
+[node name="Min" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Min10"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Min"]
 layout_mode = 2
-text = "0"
+text = "00"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min10"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/FocusTimeControl/Time/Min"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="add_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min10"]
+[node name="sub_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "-"
 
-[node name="Min1" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Min1"]
-layout_mode = 2
-text = "0"
-label_settings = SubResource("LabelSettings_wal2d")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min1"]
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min1"]
+[node name="sub_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "-"
 
@@ -128,41 +129,42 @@ label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
+[node name="Sec" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sec10"]
+[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sec"]
 layout_mode = 2
-text = "0"
+text = "00"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec10"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/FocusTimeControl/Time/Sec"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="add_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec10"]
+[node name="sub_10" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "-"
 
-[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/FocusTimeControl/Time/Sec1"]
-layout_mode = 2
-text = "0"
-label_settings = SubResource("LabelSettings_wal2d")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec1"]
+[node name="add_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec1"]
+[node name="sub_1" type="Button" parent="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "-"
 
@@ -211,41 +213,41 @@ label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Min10" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
+[node name="Min" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Min10"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Min"]
 layout_mode = 2
-text = "0"
+text = "00"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min10"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/RestTimeControl/Time/Min"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="add_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min10"]
+[node name="sub_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "-"
 
-[node name="Min1" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Min1"]
-layout_mode = 2
-text = "0"
-label_settings = SubResource("LabelSettings_wal2d")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min1"]
+[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min1"]
+[node name="sub_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "-"
 
@@ -260,61 +262,66 @@ label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Sec10" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
+[node name="Sec" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sec10"]
+[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sec"]
 layout_mode = 2
-text = "0"
+text = "00"
 label_settings = SubResource("LabelSettings_wal2d")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="add_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec10"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/RestTimeControl/Time/Sec"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="add_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec10"]
+[node name="sub_10" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "-"
 
-[node name="Sec1" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="VBoxContainer/RestTimeControl/Time/Sec1"]
-layout_mode = 2
-text = "0"
-label_settings = SubResource("LabelSettings_wal2d")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec1"]
+[node name="add_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "+"
 
-[node name="sub_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec1"]
+[node name="sub_1" type="Button" parent="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 text = "-"
 
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "시작하기"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Hour/add_1" to="VBoxContainer/FocusTimeControl" method="HourAdd1Button"]
 [connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Hour/sub_1" to="VBoxContainer/FocusTimeControl" method="HourSub1Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min10/add_10" to="VBoxContainer/FocusTimeControl" method="MinAdd10Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min10/sub_10" to="VBoxContainer/FocusTimeControl" method="MinSub10Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min1/add_1" to="VBoxContainer/FocusTimeControl" method="MinAdd1Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min1/sub_1" to="VBoxContainer/FocusTimeControl" method="MinSub1Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec10/add_10" to="VBoxContainer/FocusTimeControl" method="SecAdd10Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec10/sub_10" to="VBoxContainer/FocusTimeControl" method="SecSub10Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec1/add_1" to="VBoxContainer/FocusTimeControl" method="SecAdd1Button"]
-[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec1/sub_1" to="VBoxContainer/FocusTimeControl" method="SecSub1Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer/add_10" to="VBoxContainer/FocusTimeControl" method="MinAdd10Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer/sub_10" to="VBoxContainer/FocusTimeControl" method="MinSub10Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer2/add_1" to="VBoxContainer/FocusTimeControl" method="MinAdd1Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Min/HBoxContainer/VBoxContainer2/sub_1" to="VBoxContainer/FocusTimeControl" method="MinSub1Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer/add_10" to="VBoxContainer/FocusTimeControl" method="SecAdd10Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer/sub_10" to="VBoxContainer/FocusTimeControl" method="SecSub10Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer2/add_1" to="VBoxContainer/FocusTimeControl" method="SecAdd1Button"]
+[connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Sec/HBoxContainer/VBoxContainer2/sub_1" to="VBoxContainer/FocusTimeControl" method="SecSub1Button"]
 [connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Hour/add_1" to="VBoxContainer/RestTimeControl" method="HourAdd1Button"]
 [connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Hour/sub_1" to="VBoxContainer/RestTimeControl" method="HourSub1Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min10/add_10" to="VBoxContainer/RestTimeControl" method="MinAdd10Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min10/sub_10" to="VBoxContainer/RestTimeControl" method="MinSub10Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min1/add_1" to="VBoxContainer/RestTimeControl" method="MinAdd1Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min1/sub_1" to="VBoxContainer/RestTimeControl" method="MinSub1Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec10/add_10" to="VBoxContainer/RestTimeControl" method="SecAdd10Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec10/sub_10" to="VBoxContainer/RestTimeControl" method="SecSub10Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec1/add_1" to="VBoxContainer/RestTimeControl" method="SecAdd1Button"]
-[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec1/sub_1" to="VBoxContainer/RestTimeControl" method="SecSub1Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer/add_10" to="VBoxContainer/RestTimeControl" method="MinAdd10Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer/sub_10" to="VBoxContainer/RestTimeControl" method="MinSub10Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer2/add_1" to="VBoxContainer/RestTimeControl" method="MinAdd1Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Min/HBoxContainer/VBoxContainer2/sub_1" to="VBoxContainer/RestTimeControl" method="MinSub1Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer/add_10" to="VBoxContainer/RestTimeControl" method="SecAdd10Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer/sub_10" to="VBoxContainer/RestTimeControl" method="SecSub10Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer2/add_1" to="VBoxContainer/RestTimeControl" method="SecAdd1Button"]
+[connection signal="button_down" from="VBoxContainer/RestTimeControl/Time/Sec/HBoxContainer/VBoxContainer2/sub_1" to="VBoxContainer/RestTimeControl" method="SecSub1Button"]

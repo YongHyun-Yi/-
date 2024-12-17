@@ -1,10 +1,8 @@
 extends HBoxContainer
 
 @onready var RestHourLabel = $Time/Hour/Label
-@onready var RestMin10Label = $Time/Min10/Label
-@onready var RestMin1Label = $Time/Min1/Label
-@onready var RestSec10Label = $Time/Sec10/Label
-@onready var RestSec1Label = $Time/Sec1/Label
+@onready var RestMinLabel = $Time/Min/Label
+@onready var RestSecLabel = $Time/Sec/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,12 +17,8 @@ func _process(delta: float) -> void:
 
 func RestTimeLabelUpdate():
 	RestHourLabel.text = str(GlobalScript.RestTimeData.Hour)
-	
-	RestMin10Label.text = str(GlobalScript.RestTimeData.Min / 10)
-	RestMin1Label.text = str(GlobalScript.RestTimeData.Min % 10)
-	
-	RestSec10Label.text = str(GlobalScript.RestTimeData.Sec / 10)
-	RestSec1Label.text = str(GlobalScript.RestTimeData.Sec % 10)
+	RestMinLabel.text = str("%02d" % GlobalScript.RestTimeData.Min)
+	RestSecLabel.text = str("%02d" % GlobalScript.RestTimeData.Sec)
 	return
 
 func HourAdd1Button() -> void:

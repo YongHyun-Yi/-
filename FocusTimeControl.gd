@@ -1,10 +1,8 @@
 extends HBoxContainer
 
 @onready var FocusHourLabel = $Time/Hour/Label
-@onready var FocusMin10Label = $Time/Min10/Label
-@onready var FocusMin1Label = $Time/Min1/Label
-@onready var FocusSec10Label = $Time/Sec10/Label
-@onready var FocusSec1Label = $Time/Sec1/Label
+@onready var FocusMinLabel = $Time/Min/Label
+@onready var FocusSecLabel = $Time/Sec/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,12 +17,8 @@ func _process(delta: float) -> void:
 
 func FocusTimeLabelUpdate():
 	FocusHourLabel.text = str(GlobalScript.FocusTimeData.Hour)
-	
-	FocusMin10Label.text = str(GlobalScript.FocusTimeData.Min / 10)
-	FocusMin1Label.text = str(GlobalScript.FocusTimeData.Min % 10)
-	
-	FocusSec10Label.text = str(GlobalScript.FocusTimeData.Sec / 10)
-	FocusSec1Label.text = str(GlobalScript.FocusTimeData.Sec % 10)
+	FocusMinLabel.text = str("%02d" % GlobalScript.FocusTimeData.Min)
+	FocusSecLabel.text = str("%02d" % GlobalScript.FocusTimeData.Sec)
 	return
 
 func HourAdd1Button() -> void:
