@@ -9,9 +9,9 @@ func _on_visibility_changed() -> void:
 		CurState = FOCUS
 		$Label.text = "집중 시간"
 		$HBoxContainer/PauseButton.text = "일시정지"
-		$Timer.wait_time = GlobalScript.FocusTimeData.GetTotalSec()
-		$Timer.start()
+		$Timer.wait_time = GlobalScript.FocusTimeData.GetTotalSec() + .9
 		$Timer.paused = false
+		$Timer.start()
 	else:
 		$Timer.stop()
 		if $sfx.playing:
@@ -38,7 +38,7 @@ func TimerTimeout() -> void:
 		FOCUS:
 			CurState = REST
 			$Label.text = "휴식 시간"
-			$Timer.wait_time = GlobalScript.RestTimeData.GetTotalSec()
+			$Timer.wait_time = GlobalScript.RestTimeData.GetTotalSec() + .9
 			$HBoxContainer/SkipButton.disabled = false
 			if $sfx.playing:
 				$sfx.stop()
@@ -48,13 +48,13 @@ func TimerTimeout() -> void:
 		REST:
 			CurState = FOCUS
 			$Label.text = "집중 시간"
-			$Timer.wait_time = GlobalScript.FocusTimeData.GetTotalSec()
+			$Timer.wait_time = GlobalScript.FocusTimeData.GetTotalSec() + .9
 			$HBoxContainer/SkipButton.disabled = true
 			if $sfx.playing:
 				$sfx.stop()
 			$sfx.stream = GlobalScript.FocusMusicWav
 			$sfx.play()
-	
+			
 	$Timer.start()
 	pass # Replace with function body.
 
