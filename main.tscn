@@ -20,7 +20,7 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
-[connection signal="button_down" from="TimeSetting/VBoxContainer/StartButton" to="." method="StartButtonDown"]
+[connection signal="button_down" from="TimeSetting/StartButton" to="." method="StartButtonDown"]
 [connection signal="button_down" from="PomoTimer/HBoxContainer/StopButton" to="." method="StopButtonDown"]
 
 [editable path="TimeSetting"]

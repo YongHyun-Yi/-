@@ -1,14 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgu6jdnvck8hd"]
+[gd_scene load_steps=7 format=3 uid="uid://dgu6jdnvck8hd"]
 
 [ext_resource type="Script" path="res://time_setting.gd" id="1_7jowc"]
 [ext_resource type="Script" path="res://FocusTimeControl.gd" id="2_g0kcq"]
 [ext_resource type="Script" path="res://RestTimeControl.gd" id="3_lresq"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_722x6"]
+font_size = 27
+font_color = Color(0.86, 0, 0, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_sqqs8"]
 font_size = 46
 
 [sub_resource type="LabelSettings" id="LabelSettings_wal2d"]
-font_size = 46
+font_size = 111
 
 [node name="TimeSetting" type="Control"]
 layout_mode = 3
@@ -19,6 +25,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jowc")
 
+[node name="TimeError" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -611.0
+offset_right = 180.0
+offset_bottom = -573.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "시간을 1초 이상 설정해주세요"
+label_settings = SubResource("LabelSettings_722x6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -26,16 +51,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -222.0
-offset_top = -101.0
-offset_right = 222.0
-offset_bottom = 101.0
+offset_left = -448.0
+offset_top = -255.0
+offset_right = 449.0
+offset_bottom = 193.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 30
 
 [node name="FocusTimeControl" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/separation = 32
 script = ExtResource("2_g0kcq")
 
@@ -170,6 +195,7 @@ text = "-"
 
 [node name="RestTimeControl" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/separation = 32
 script = ExtResource("3_lresq")
 
@@ -300,27 +326,22 @@ text = "+"
 layout_mode = 2
 text = "-"
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "시작하기"
-
-[node name="TimeError" type="Label" parent="."]
-visible = false
+[node name="StartButton" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -107.0
-offset_top = -44.0
-offset_right = 107.0
-offset_bottom = -21.0
+offset_left = -100.0
+offset_top = -79.0
+offset_right = 100.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "시간을 1초 이상 설정해주세요"
-horizontal_alignment = 1
-vertical_alignment = 1
+size_flags_horizontal = 4
+text = "시작하기"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="button_down" from="VBoxContainer/FocusTimeControl/Time/Hour/add_1" to="VBoxContainer/FocusTimeControl" method="HourAdd1Button"]

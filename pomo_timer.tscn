@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://pomo_timer.gd" id="1_xmeks"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_65eq6"]
-font_size = 101
+font_size = 241
 
 [sub_resource type="LabelSettings" id="LabelSettings_3ok3c"]
-font_size = 26
+font_size = 61
 
 [node name="PomoTimer" type="Control"]
 layout_mode = 3
@@ -86,24 +86,27 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -112.0
-offset_top = -119.0
-offset_right = 112.0
-offset_bottom = -79.0
+offset_left = -335.0
+offset_top = -125.0
+offset_right = 335.0
+offset_bottom = -55.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 35
+theme_override_constants/separation = 120
 
 [node name="SkipButton" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 disabled = true
 text = "건너뛰기"
 
 [node name="PauseButton" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 text = "일시정지"
 
 [node name="StopButton" type="Button" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 70)
 layout_mode = 2
 text = "그만하기"
 
